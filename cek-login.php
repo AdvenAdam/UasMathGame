@@ -3,8 +3,8 @@ include 'koneksi/koneksi.php';
 if(isset($_POST['submit'])) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-	$sql = mysql_query("SELECT * FROM tbl_identitas where Nama='$name' and Email='$email'");
-    $data = mysql_fetch_array($sql);
+	$sql = mysqli_query("SELECT * FROM tbl_identitas where Nama='$name' and Email='$email'");
+    $data = mysqli_fetch_array($sql);
     $namacek = $data['Nama'];
 	$emailcek = $data['Email'];
 	
